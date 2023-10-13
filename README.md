@@ -1,5 +1,4 @@
-# Maestria en Software
+# Maestría en Software
+## Módulo de Diseño de Patrones de APIs
+### Gestión del Asincronismo (FrontEnd)
 
-## Disenio de patrones en apis
-
-### Gestion del Asincronismo (FrontEnd)
