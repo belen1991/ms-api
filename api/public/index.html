@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Representantes Legales</title>
+</head>
+<body>
+    <h1>Listado de Representantes Legales</h1>
+    <!-- Add a button or anchor element to reference the "Add Representante Legal" page -->
+    <a href="/add-representante-legal" class="btn">Agregar Representante Legal</a>
+    <ul>
+        <% for (const representanteLegal of representantesLegales) { %>
+            <li>
+                <strong>RUC:</strong> <%= representanteLegal.ruc %><br>
+                <strong>Nombre:</strong> <%= representanteLegal.nombre %><br>
+                <strong>Apellido:</strong> <%= representanteLegal.apellido %><br>
+                <strong>Email:</strong> <%= representanteLegal.email %><br>
+                <!-- Add more fields as needed -->
+            </li>
+            <br>
+        <% } %>
+    </ul>
+</body>
+</html>
