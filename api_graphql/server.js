@@ -27,7 +27,6 @@ let schema = buildSchema(`
     }
 `)
 
-let clientes = []
 let counter = 1
 
 let root = {
