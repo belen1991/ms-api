@@ -1,0 +1,201 @@
+/* Reset some default styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+}
+
+#representantes-list {
+    margin: 20px;
+}
+
+.representante {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.representante strong {
+    font-weight: bold;
+}
+
+/* Add hover effect */
+.representante:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+}
+
+/* Style regular anchor links */
+  a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #007bff; /* Set link color */
+    transition: color 0.2s; /* Add a smooth color transition effect */
+    margin: 10px;
+    /* Optionally, you can add other properties like hover effects, background color, etc. */
+  }
+  
+  a:hover {
+    color: #0056b3; /* Change color on hover */
+  }
+  
+  /* Style anchor links within a specific class or ID */
+  .your-class a {
+    /* Your specific styles for links within elements with class "your-class" */
+  }
+  
+  #your-id a {
+    /* Your specific styles for links within elements with ID "your-id" */
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: left;
+  }
+
+  label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+      width: 100%;
+      padding: 10px 0px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+
+  label[for="empresa-select"] {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  select option {
+    background-color: #fff;
+    color: #333;
+  }
+
+  select:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: #007bff; /* Change border color when focused */
+  }
+
+  /* Style anchor links as buttons */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+    margin: 10px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  /* Optional: Disable the button style for a specific class */
+  .no-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+    margin: 10px;
+  }
+  
+  /* Optional: Style a disabled link */
+  .no-button:hover {
+    color: #0056b3;
+  }
+
+  /* Style the popup */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 400px;
+    text-align: center;
+    }
+
+    body::after {
+        content: "";
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .popup-content {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .close-button {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        color: #007bff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .close-button:hover {
+        color: #0056b3;
+    }

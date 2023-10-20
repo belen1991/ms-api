@@ -21,6 +21,7 @@ function get_representante_legal(filtro_representante_legal) {
         const lista = data.map((elemento) => {
           const objeto = {
             id: elemento._id,
+            ruc: elemento.ruc,
             cedula: elemento.cedula,
             nombre: elemento.nombre,
             apellido: elemento.apellido,
@@ -63,6 +64,22 @@ async function update_representante_legal( representante_legal ) {
     }
 }
 
+async function add_empresa(id, empresaId) {
+    const representante_legal = await model.findOne({ _id: id });
+
+    if (!representante_legal) {
+        return null;
+    }
+    representante_legal.empresa_detalle.push({ empresa: empresaId });
+
+    try {
+        await representante_legal.save();
+        return representante_legal;
+    } catch (error) {
+        return null;
+    }
+}
+
 async function delete_representante_legal( ruc ) {
     return await model.deleteOne({ruc: ruc})
 }
@@ -71,5 +88,6 @@ module.exports = {
     add: add_representante_legal,
     get: get_representante_legal,
     update: update_representante_legal,
+    addEmpresa: add_empresa,
     delete: delete_representante_legal
 }
